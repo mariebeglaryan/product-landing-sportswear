@@ -2,6 +2,27 @@
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// ——— Gallery filter ———
+const filterBtns = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const filter = btn.getAttribute("data-filter");
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    galleryItems.forEach((item) => {
+      const category = item.getAttribute("data-category");
+      if (filter === "all" || category === filter) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+  });
+});
+
 // ——— Lightbox ———
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");

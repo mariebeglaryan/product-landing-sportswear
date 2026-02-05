@@ -293,6 +293,42 @@ img{ max-width:100%; display:block; }
   cursor: pointer;
 }
 
+.gallery-item.hidden{
+  display: none;
+}
+
+/* Gallery filter */
+.gallery-filters{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.filter-btn{
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: .92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.filter-btn:hover{
+  background: rgba(15,15,15,.04);
+  color: var(--ink);
+}
+
+.filter-btn.active{
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
 /* Lightbox */
 .lightbox-overlay{
   position: fixed;
