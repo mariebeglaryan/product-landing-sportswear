@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athletica — Fashion-forward fitness</title>
+
+  <!-- Clean sans + elegant serif (Alo-inspired vibe) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Athletica Home">
+        <span class="brand-name">Athletica</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#sportswear">Sportswear</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+
+      <a class="btn btn-outline" href="#pricing">Shop</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">New collection</p>
+          <h1 class="hero-title">Athletica</h1>
+          <p class="lead">Fashion-forward fitness to elevate your game.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-solid" href="#sportswear">See full collection</a>
+            <a class="btn btn-ghost" href="#pricing">View pricing</a>
+          </div>
+
+          <div class="mini-row" aria-label="Highlights">
+            <div class="mini">
+              <p class="mini-top">Premium</p>
+              <p class="mini-bottom">materials</p>
+            </div>
+            <div class="mini">
+              <p class="mini-top">Studio</p>
+              <p class="mini-bottom">to street</p>
+            </div>
+            <div class="mini">
+              <p class="mini-top">30-day</p>
+              <p class="mini-bottom">returns</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Featured look">
+          <div class="hero-panel-inner">
+            <p class="hero-panel-label">Featured set</p>
+            <h2 class="hero-panel-title">Minimal. Modern. Made to move.</h2>
+            <p class="muted">
+              Clean silhouettes, elevated neutrals, and performance fabrics designed for all-day wear.
+            </p>
+            <div class="hero-badges">
+              <span class="pill">Breathable</span>
+              <span class="pill">Soft-touch</span>
+              <span class="pill">Tailored fit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASE (Sportswear) -->
+    <section id="sportswear" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Sportswear</h2>
+          <p class="muted">Three essentials curated for a polished performance wardrobe.</p>
+        </div>
+
+        <div class="grid cards-3">
+          <!-- Sneakers -->
+          <article class="card product-card">
+            <div class="media">
+              <img src="assets/sneakers.png" alt="Athletica sports sneakers" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Sneakers</h3>
+              <p class="muted">Lightweight comfort with a statement-ready profile.</p>
+              <div class="meta-row">
+                <span class="tag">New</span>
+                <span class="price">$120</span>
+              </div>
+              <a class="card-link" href="#pricing" aria-label="See pricing for Sneakers">See details →</a>
+            </div>
+          </article>
+
+          <!-- Sport bags -->
+          <article class="card product-card">
+            <div class="media">
+              <img src="assets/bag.png" alt="Athletica sports bag" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Sport Bag</h3>
+              <p class="muted">Sleek carry, smart compartments, gym-to-city ready.</p>
+              <div class="meta-row">
+                <span class="tag">Best Seller</span>
+                <span class="price">$85</span>
+              </div>
+              <a class="card-link" href="#pricing" aria-label="See pricing for Sport Bag">See details →</a>
+            </div>
+          </article>
+
+          <!-- Flexflow leggings -->
+          <article class="card product-card">
+            <div class="media">
+              <img src="assets/leggings.png" alt="Athletica FlexFlow leggings" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">FlexFlow Leggings</h3>
+              <p class="muted">Second-skin feel with sculpt support and breathability.</p>
+              <div class="meta-row">
+                <span class="tag">Studio</span>
+                <span class="price">$98</span>
+              </div>
+              <a class="card-link" href="#pricing" aria-label="See pricing for FlexFlow Leggings">See details →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Benefits</h2>
+          <p class="muted">Designed for confidence, comfort, and clean lines.</p>
+        </div>
+
+        <ul class="benefits" aria-label="Benefits list">
+          <li>
+            <span class="benefit-icon" aria-hidden="true">✨</span>
+            <div>
+              <p class="benefit-title">Elevated minimal design</p>
+              <p class="muted">Neutral tones and refined silhouettes that pair with everything.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-icon" aria-hidden="true">🌿</span>
+            <div>
+              <p class="benefit-title">Soft, breathable fabrics</p>
+              <p class="muted">Comfort-first materials that move with you from morning to night.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-icon" aria-hidden="true">🧵</span>
+            <div>
+              <p class="benefit-title">Premium construction</p>
+              <p class="muted">Thoughtful seams and durable stitching for everyday wear.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Testimonials</h2>
+          <p class="muted">What our customers say after training, travel, and everything in between.</p>
+        </div>
+
+        <div class="grid cards-2">
+          <figure class="card quote">
+            <blockquote>
+              “The FlexFlow leggings feel luxe and supportive — I wear them to Pilates and then straight to errands.”
+            </blockquote>
+            <figcaption class="muted">— Arpi, Pilates enthusiast</figcaption>
+          </figure>
+
+          <figure class="card quote">
+            <blockquote>
+              “The sneakers are insanely comfortable, and the styling looks premium with any outfit.”
+            </blockquote>
+            <figcaption class="muted">— Narek, daily runner</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Pricing</h2>
+          <p class="muted">Choose the set that matches your routine.</p>
+        </div>
+
+        <div class="grid pricing-3">
+          <article class="card price-card">
+            <h3 class="card-title">Starter</h3>
+            <p class="muted">1 item</p>
+            <p class="price-lg">$59</p>
+            <ul class="list">
+              <li>Any single essential</li>
+              <li>Standard shipping</li>
+              <li>30-day returns</li>
+            </ul>
+            <a class="btn btn-outline full" href="#sportswear">Choose Starter</a>
+          </article>
+
+          <article class="card price-card featured" aria-label="Most popular plan">
+            <div class="pill top">Most Popular</div>
+            <h3 class="card-title">Core</h3>
+            <p class="muted">2 items</p>
+            <p class="price-lg">$99</p>
+            <ul class="list">
+              <li>Mix & match essentials</li>
+              <li>Priority shipping</li>
+              <li>Easy exchanges</li>
+            </ul>
+            <a class="btn btn-solid full" href="#sportswear">Choose Core</a>
+          </article>
+
+          <article class="card price-card">
+            <h3 class="card-title">Complete</h3>
+            <p class="muted">3 items</p>
+            <p class="price-lg">$139</p>
+            <ul class="list">
+              <li>Full capsule set</li>
+              <li>Priority shipping</li>
+              <li>VIP support</li>
+            </ul>
+            <a class="btn btn-outline full" href="#sportswear">Choose Complete</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> Athletica. All rights reserved.</p>
+      <nav class="social" aria-label="Social links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
