@@ -87,11 +87,18 @@
           <p class="muted">Three essentials curated for a polished performance wardrobe.</p>
         </div>
 
-        <div class="grid cards-3">
+        <div class="gallery-filters" role="tablist" aria-label="Filter gallery">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="sneakers">Sneakers</button>
+          <button type="button" class="filter-btn" data-filter="bags">Bags</button>
+          <button type="button" class="filter-btn" data-filter="leggings">Leggings</button>
+        </div>
+
+        <div class="grid cards-3 gallery-grid">
           <!-- Sneakers -->
-          <article class="card product-card">
-            <div class="media">
-              <img src="assets/sneakers.png" alt="Athletica sports sneakers" />
+          <article class="card product-card gallery-item" data-category="sneakers">
+            <div class="media gallery-media">
+              <img class="gallery-img" src="assets/sneakers.png" alt="Athletica sports sneakers" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Sneakers</h3>
@@ -105,9 +112,9 @@
           </article>
 
           <!-- Sport bags -->
-          <article class="card product-card">
-            <div class="media">
-              <img src="assets/bag.png" alt="Athletica sports bag" />
+          <article class="card product-card gallery-item" data-category="bags">
+            <div class="media gallery-media">
+              <img class="gallery-img" src="assets/bag.png" alt="Athletica sports bag" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Sport Bag</h3>
@@ -121,9 +128,9 @@
           </article>
 
           <!-- Flexflow leggings -->
-          <article class="card product-card">
-            <div class="media">
-              <img src="assets/leggings.png" alt="Athletica FlexFlow leggings" />
+          <article class="card product-card gallery-item" data-category="leggings">
+            <div class="media gallery-media">
+              <img class="gallery-img" src="assets/leggings.png" alt="Athletica FlexFlow leggings" />
             </div>
             <div class="card-body">
               <h3 class="card-title">FlexFlow Leggings</h3>
@@ -248,6 +255,16 @@
       </div>
     </section>
   </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox-overlay" aria-hidden="true" aria-label="Image lightbox">
+    <button type="button" class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+    <button type="button" class="lightbox-next" aria-label="Next image">&#10095;</button>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
