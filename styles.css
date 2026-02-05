@@ -289,6 +289,10 @@ img{ max-width:100%; display:block; }
   transform: scale(1.02);
 }
 
+.gallery-media{
+  cursor: pointer;
+}
+
 .card-body{
   padding: 16px 16px 18px;
 }
