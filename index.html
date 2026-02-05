@@ -28,7 +28,10 @@
         <a href="#pricing" class="nav-link">Pricing</a>
       </nav>
 
-      <a class="btn btn-outline" href="#pricing">Shop</a>
+      <div class="header-ctas">
+        <a class="btn btn-solid btn-cta-open" href="#" role="button">Get Started</a>
+        <a class="btn btn-outline" href="#pricing">Shop</a>
+      </div>
     </div>
   </header>
 
@@ -42,7 +45,8 @@
           <p class="lead">Fashion-forward fitness to elevate your game.</p>
 
           <div class="cta-row">
-            <a class="btn btn-solid" href="#sportswear">See full collection</a>
+            <a class="btn btn-solid btn-cta-open" href="#" role="button">Get Started</a>
+            <a class="btn btn-ghost" href="#sportswear">See full collection</a>
             <a class="btn btn-ghost" href="#pricing">View pricing</a>
           </div>
 
@@ -248,6 +252,26 @@
       </div>
     </section>
   </main>
+
+  <!-- CTA Modal -->
+  <div id="cta-modal" class="modal-overlay" aria-hidden="true" aria-label="Get started form">
+    <div class="modal" role="dialog">
+      <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      <h2 class="modal-title">Get Started</h2>
+      <p class="muted modal-subtitle">Share your details and we'll help you find the right fit.</p>
+      <form id="cta-form" class="modal-form" novalidate>
+        <label for="cta-name">Name <span class="required">*</span></label>
+        <input type="text" id="cta-name" name="name" required autocomplete="name" placeholder="Your name" />
+        <span class="field-error" id="cta-name-error" role="alert"></span>
+
+        <label for="cta-email">Email <span class="required">*</span></label>
+        <input type="email" id="cta-email" name="email" required autocomplete="email" placeholder="you@example.com" />
+        <span class="field-error" id="cta-email-error" role="alert"></span>
+
+        <button type="submit" class="btn btn-solid full">Submit</button>
+      </form>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">

@@ -27,3 +27,43 @@ function setActiveNavLink() {
 
 window.addEventListener("scroll", setActiveNavLink);
 window.addEventListener("load", setActiveNavLink);
+
+// ——— CTA Modal ———
+const modal = document.getElementById("cta-modal");
+const openButtons = document.querySelectorAll(".btn-cta-open");
+const closeButton = modal?.querySelector(".modal-close");
+const nameInput = document.getElementById("cta-name");
+
+function openModal() {
+  if (!modal) return;
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  nameInput?.focus();
+}
+
+function closeModal() {
+  if (!modal) return;
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+openButtons?.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    openModal();
+  });
+});
+
+closeButton?.addEventListener("click", closeModal);
+
+modal?.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal?.classList.contains("is-open")) {
+    closeModal();
+  }
+});
