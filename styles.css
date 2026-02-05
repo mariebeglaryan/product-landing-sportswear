@@ -13,6 +13,9 @@
 }
 
 *{ box-sizing:border-box; }
+html{
+  scroll-behavior: smooth;
+}
 html,body{ margin:0; padding:0; }
 body{
   font-family: var(--sans);
@@ -68,6 +71,12 @@ img{ max-width:100%; display:block; }
 .nav a:hover{
   background: rgba(15,15,15,.06);
   color: var(--ink);
+}
+
+.nav a.nav-active{
+  background: rgba(15,15,15,.08);
+  color: var(--ink);
+  font-weight: 500;
 }
 
 /* Buttons */
