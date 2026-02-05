@@ -30,9 +30,15 @@ window.addEventListener("load", setActiveNavLink);
 
 // ——— CTA Modal ———
 const modal = document.getElementById("cta-modal");
+const ctaForm = document.getElementById("cta-form");
 const openButtons = document.querySelectorAll(".btn-cta-open");
 const closeButton = modal?.querySelector(".modal-close");
 const nameInput = document.getElementById("cta-name");
+const emailInput = document.getElementById("cta-email");
+const nameError = document.getElementById("cta-name-error");
+const emailError = document.getElementById("cta-email-error");
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function openModal() {
   if (!modal) return;
@@ -47,6 +53,35 @@ function closeModal() {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
+}
+
+function validateForm() {
+  let valid = true;
+  const name = nameInput?.value.trim();
+  const email = emailInput?.value.trim();
+
+  if (nameError) nameError.textContent = "";
+  if (emailError) emailError.textContent = "";
+  nameInput?.classList.remove("input-error");
+  emailInput?.classList.remove("input-error");
+
+  if (!name) {
+    if (nameError) nameError.textContent = "Name is required.";
+    nameInput?.classList.add("input-error");
+    valid = false;
+  }
+
+  if (!email) {
+    if (emailError) emailError.textContent = "Email is required.";
+    emailInput?.classList.add("input-error");
+    valid = false;
+  } else if (!EMAIL_REGEX.test(email)) {
+    if (emailError) emailError.textContent = "Please enter a valid email address.";
+    emailInput?.classList.add("input-error");
+    valid = false;
+  }
+
+  return valid;
 }
 
 openButtons?.forEach((btn) => {
@@ -66,4 +101,11 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal?.classList.contains("is-open")) {
     closeModal();
   }
+});
+
+ctaForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!validateForm()) return;
+  closeModal();
+  ctaForm.reset();
 });
